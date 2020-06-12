@@ -118,10 +118,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body class="@" data-spy="scroll" data-target="#navbar" data-offset="30">
+
+
+<div id="modalbannermostrar" class="modalbanner-bg">
+  <div class="modalbanner-box">
+    <button id="botaofechar" class="fechar">X</button>
+    <img src="images/BannerPingui.png">
+  </div>
+  </div>
+
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSGX7TV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 
     <!-- Nav Menu -->
 
@@ -146,6 +156,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </div>
+
 
  <!-- // end .section -->
     <header class="bg-gradient" id="home">
@@ -484,9 +495,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </footer>
 
+
     <!-- // end .section -->
 
-    <!-- jQuery and Bootstrap -->
+
+    <!-- Iniciar Modal -->
+    <script>
+        function iniciaModal(modalID) {
+            const modal = document.getElementById(modalID);
+            modal.classList.add('mostrar');
+
+            modal.addEventListener('click', (e) => {
+                if (e.target.id == modalID || e.target.id == 'botaofechar') {
+                    modal.classList.remove('mostrar');
+                }
+            });
+        }
+
+        iniciaModal('modalbannermostrar');
+
+    </script>
+
+    <!-- jQuery and Bootstrap --><wbr>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Plugins JS -->
