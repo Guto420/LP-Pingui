@@ -730,4 +730,39 @@ header {
 .modalbanner-bg.mostrar{
     display: flex;
 }
+#imagemTel{
+    height: 600px; 
+    width: 60%;
+}
+#h3Tel{
+    font-size: 26px;
+    font-family: 'OpenSans-Bold'; 
+    color: black;
+    text-align: left;
+    margin-bottom: 50px;
+}
+#pTel{
+    text-align: left; 
+    font-family: 'OpenSans-Regular';
+    margin-bottom: 30px;
+}
+#aTel{
+    font-size: 15px; 
+    height: 40px;
+    width: 60%; 
+    font-family: 'OpenSans-SemiBold';
+}
+@media (max-width:768px) {
+    .container {
+        flex-direction: column;
+    }
+    #imagemTel{
+        height: 400px;
+        width: 100%;
+    }
+    #h3Tel{
+        margin-top: 20px;
+    }
+}
+
 
